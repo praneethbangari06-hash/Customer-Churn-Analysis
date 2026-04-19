@@ -60,7 +60,7 @@ df.dropna(inplace=True)
 sns.countplot(x='Churn', data=df)
 ```
 
-![Churn Distribution](Screenshot 2026-04-19 113408)
+![Churn Distribution](churn_distribution.png)
 
 > 💡 **Insight:** Around **26–27% of customers are churning** — a significant business concern.
 
@@ -72,7 +72,7 @@ sns.countplot(x='Churn', data=df)
 sns.boxplot(x='Churn', y='tenure', data=df)
 ```
 
-![Tenure vs Churn](Screenshot 2026-04-19 113422)
+![Tenure vs Churn](tenure_analysis.png)
 
 > 💡 **Insight:** Churned customers have a **median tenure of ~10 months**, while retained customers average ~38 months. **New users are at much higher risk.**
 
@@ -84,7 +84,7 @@ sns.boxplot(x='Churn', y='tenure', data=df)
 sns.boxplot(x='Churn', y='MonthlyCharges', data=df)
 ```
 
-![Monthly Charges vs Churn](Screenshot 2026-04-19 113439)
+![Monthly Charges vs Churn](monthly_charges.png)
 
 > 💡 **Insight:** Customers paying **higher monthly charges tend to churn more** — high expectations may not be met.
 
@@ -96,7 +96,7 @@ sns.boxplot(x='Churn', y='MonthlyCharges', data=df)
 sns.countplot(x='Contract', hue='Churn', data=df)
 ```
 
-![Contract Type vs Churn](Screenshot 2026-04-19 113449)
+![Contract Type vs Churn](contract_analysis.png)
 
 > 💡 **Insight:** **Month-to-month customers have the highest churn rate.** Two-year contract customers almost never churn.
 
@@ -141,7 +141,7 @@ importance.sort_values().tail(10).plot(kind='barh')
 plt.title("Top Factors Influencing Churn")
 ```
 
-![Feature Importance](Screenshot 2026-04-19 113500)
+![Feature Importance](feature_importance.png)
 
 > 💡 **Top churn drivers:**
 > - 🥇 `InternetService_Fiber optic` — Highest impact
